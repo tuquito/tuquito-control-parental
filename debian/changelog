@@ -1,0 +1,18 @@
+tuquito-control-parental (0.1-3) lucid; urgency=low
+
+  * uso de variables de  entorno
+  * correccion en lanzadores
+
+ -- Mario Colque <mario@tuquito.org.ar>  Mon, 10 May 2010 14:12:24 -0300
+
+tuquito-control-parental (0.1-2) lucid; urgency=low
+
+  * agregado lanzadores y correcciones de dir
+
+ -- Mario Colque <mario@tuquito.org.ar>  Mon, 10 May 2010 12:19:14 -0300
+
+tuquito-control-parental (0.1-1) lucid; urgency=low
+
+  * Versión inicial
+
+ -- Mario Colque <mario@tuquito.org.ar>  Wed, 28 Apr 2010 19:32:15 -0300

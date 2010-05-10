@@ -1,0 +1,6 @@
+tuquito-control-parental for Debian
+-----------------
+
+Aplicación que permite el control de acceso a sitios web utilizandon el archivo /etc/hosts
+
+ -- Mario Colque <mario@tuquito.org.ar>  Tue, 23 Mar 2010 19:24:48 -0300
