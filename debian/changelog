@@ -1,3 +1,9 @@
+tuquito-control-parental (0.1-6) lucid; urgency=low
+
+  * correccion en rules
+
+ -- Mario Colque <mario@tuquito.org.ar>  Mon, 10 May 2010 20:31:44 -0300
+
 tuquito-control-parental (0.1-5) lucid; urgency=low
 
   * modificado para poder subirlo
