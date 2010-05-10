@@ -1,3 +1,9 @@
+tuquito-control-parental (0.1-4) lucid; urgency=low
+
+  * Completo para la descarga
+
+ -- Mario Colque <mario@tuquito.org.ar>  Mon, 10 May 2010 18:42:08 -0300
+
 tuquito-control-parental (0.1-3) lucid; urgency=low
 
   * uso de variables de  entorno
