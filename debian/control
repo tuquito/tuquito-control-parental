@@ -4,11 +4,9 @@ Priority: extra
 Maintainer: Mario Colque <mario@tuquito.org.ar>
 Build-Depends: debhelper (>= 7)
 Standards-Version: 3.8.1
-Homepage: http://paquetes.tuquito.org.ar
 
 Package: tuquito-control-parental
 Architecture: all
-Depends: axel
 Description: Control parental de Tuquito
  Aplicación que permite el control de acceso a sitios web utilizandon el archivo /etc/hosts
  * Tuquito Team! - 2010
