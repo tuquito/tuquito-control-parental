@@ -29,7 +29,7 @@ gettext.install('tuquito-control-parental', '/usr/share/tuquito/locale')
 #-Variables
 user = os.environ.get('SUDO_USER')
 hosts = '/etc/hosts'
-hostsTmp = './control.tcp'
+hostsTmp = '/usr/lib/tuquito/tuquito-control-parental/control.tcp'
 userHome = '/home/' + user + '/TCP'
 
 class ControlP:
