@@ -1,11 +1,6 @@
 [Desktop Entry]
 Name=Control Parental
 Comment=Control de acceso a sitios web
-Comment[en]=Control de acceso a sitios web
-Comment[fr]=Control de acceso a sitios web
-Comment[it]=Control de acceso a sitios web
-Comment[pt]=Control de acceso a sitios web
-Comment[pt_BR]=Control de acceso a sitios web
 Exec=tuquito-control-parental
 Icon=/usr/lib/tuquito/tuquito-control-parental/control.png
 Terminal=false
