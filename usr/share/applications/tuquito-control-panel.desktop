@@ -5,6 +5,5 @@ Exec=tuquito-control-parental
 Icon=/usr/lib/tuquito/tuquito-control-parental/control.png
 Terminal=false
 Type=Application
-Encoding=UTF-8
-Categories=Application;System;Settings;
+Categories=System;Settings;
 StartupNotify=false

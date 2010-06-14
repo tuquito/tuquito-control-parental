@@ -37,12 +37,12 @@ class ControlP:
 		self.glade = gtk.Builder()
 		self.glade.add_from_file('/usr/lib/tuquito/tuquito-control-parental/control.glade')
 		self.window = self.glade.get_object('window')
-		self.window.set_title(_('Tuquito Control Parental'))
-		self.glade.get_object('toolbutton_import').set_label(_('Importar lista'))
-		self.glade.get_object('toolbutton_export').set_label(_('Exportar lista'))
+		self.window.set_title(_('Parental Control Tuquito'))
+		self.glade.get_object('toolbutton_import').set_label(_('Import list'))
+		self.glade.get_object('toolbutton_export').set_label(_('Export list'))
 		self.treeview_domains = self.glade.get_object('treeview_domains')
 
-		self.column1 = gtk.TreeViewColumn(_('Dominios Bloqueados'), gtk.CellRendererText(), text=0)
+		self.column1 = gtk.TreeViewColumn(_('Blocked domains'), gtk.CellRendererText(), text=0)
 		self.column1.set_sort_column_id(0)
 		self.column1.set_resizable(True)
 		self.treeview_domains.append_column(self.column1)
@@ -65,7 +65,7 @@ class ControlP:
 		self.window.show()
 
 	def notify(self, text):
-		sh = 'su ' + user + ' -c "notify-send \'Tuquito Control Parental\' \'' + text + '\' -i /usr/lib/tuquito/tuquito-control-parental/control.png"'
+		sh = 'su ' + user + ' -c "notify-send ' + _('Parental Control Tuquito') + ' ' + text + ' -i /usr/lib/tuquito/tuquito-control-parental/control.png"'
 		os.system(sh)
 
 	def about(self, widget, data=None):
@@ -73,8 +73,8 @@ class ControlP:
 
 	def addDomain(self, widget):
 		self.glade.get_object('domain').set_text('')
-		self.glade.get_object('addDomain').set_title(_('Agregar dominio'))
-		self.glade.get_object('ldomain').set_label(_('Dominio: '))
+		self.glade.get_object('addDomain').set_title(_('Add domain'))
+		self.glade.get_object('ldomain').set_label(_('Domain: '))
 		self.glade.get_object('addDomain').show()
 
 	def closeDomain(self, widget, data=None):
@@ -92,7 +92,7 @@ class ControlP:
 					dom = dom + '  ' + '.'.join(parts[1:])
 				else:
 					dom = 'www.' + dom + '  ' + '.'.join(parts)
-		domain = '0.0.0.0    ' + dom + '    # bloqueado por Tuquito 4'
+		domain = '0.0.0.0    ' + dom + '    # ' + _('blocked by Tuquito 4')
 		self.model = self.treeview_domains.get_model()
 		iter = self.model.insert_before(None, None)
 		self.model.set_value(iter, 0, dom)
@@ -112,7 +112,7 @@ class ControlP:
 			self.model.remove(iter)
 
 	def importList(self, widget):
-		self.glade.get_object('filechooserdialog').set_title(_('Importar lista'))
+		self.glade.get_object('filechooserdialog').set_title(_('Import list'))
 		self.glade.get_object('filechooserdialog').show()
 		self.glade.get_object('filechooserdialog').set_action(gtk.FILE_CHOOSER_ACTION_SAVE)
 
@@ -126,6 +126,7 @@ class ControlP:
 			f.close()
 			for stri in g:
 				self.saveDomain(self, stri.strip())
+			self.notify(_('File successfully imported'))
 			self.importClose(self)
 
 	def importClose(self, widget, data=None):
@@ -137,7 +138,7 @@ class ControlP:
 			os.mkdir(userHome)
 		os.system('cp ' + hostsTmp + ' ' + userHome + '/' + time.strftime('%d-%m-%y-%H%M%S') + '.tcp')
 		os.system('chmod -Rf 777 ' + userHome)
-		self.notify(_('Lista de dominios exportada en\n') + userHome)
+		self.notify(_('Successfully exported list.\n') + userHome)
 
 	def quit(self, widget, data=None):
 		gtk.main_quit()

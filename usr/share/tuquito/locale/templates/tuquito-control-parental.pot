@@ -1,0 +1,55 @@
+# Traducciones para Tuquito Control Parental
+# Copyright (C) 2010 tuquito-control-parental
+# This file is distributed under the same license as the tuquito-control-parental package.
+# Mario Colque <mario@tuquito.org.ar>, 2010.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: tuquito-control-parental 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-06-03 11:19-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: usr/lib/tuquito/tuquito-control-parental/control.py:40
+#: usr/lib/tuquito/tuquito-control-parental/control.py:68
+msgid "Parental Control Tuquito"
+msgstr ""
+
+#: usr/lib/tuquito/tuquito-control-parental/control.py:41
+#: usr/lib/tuquito/tuquito-control-parental/control.py:115
+msgid "Import list"
+msgstr ""
+
+#: usr/lib/tuquito/tuquito-control-parental/control.py:42
+msgid "Export list"
+msgstr ""
+
+#: usr/lib/tuquito/tuquito-control-parental/control.py:45
+msgid "Blocked domains"
+msgstr ""
+
+#: usr/lib/tuquito/tuquito-control-parental/control.py:76
+msgid "Add domain"
+msgstr ""
+
+#: usr/lib/tuquito/tuquito-control-parental/control.py:77
+msgid "Domain: "
+msgstr ""
+
+#: usr/lib/tuquito/tuquito-control-parental/control.py:95
+msgid "blocked by Tuquito 4"
+msgstr ""
+
+#: usr/lib/tuquito/tuquito-control-parental/control.py:129
+msgid "File successfully imported"
+msgstr ""
+
+#: usr/lib/tuquito/tuquito-control-parental/control.py:141
+msgid "Successfully exported list.\n"
+msgstr ""

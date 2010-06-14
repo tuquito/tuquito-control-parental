@@ -17,6 +17,8 @@
     <property name="website">www.tuquito.org.ar</property>
     <property name="website_label">Tuquito Team!</property>
     <property name="authors">Mario Colque &lt;mario@tuquito.org.ar&gt;</property>
+    <property name="translator_credits">Mario Colque &lt;mario@tuquito.org.ar&gt;
+Carlos Pessoa de Ara&#xFA;jo &lt;carlosfelipe@tuquito.org.ar&gt;</property>
     <property name="artists">Mario Colque &lt;mario@tuquito.org.ar&gt;</property>
     <property name="logo">control.png</property>
     <signal name="response" handler="quit"/>
