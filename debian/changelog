@@ -1,3 +1,9 @@
+tuquito-control-parental (0.1-10.1) lucid; urgency=low
+
+  * Revisión de traducciones
+
+ -- Mario Colque <mario@tuquito.org.ar>  Mon, 28 Jun 2010 17:30:39 -0300
+
 tuquito-control-parental (0.1-10) lucid; urgency=low
 
   * correccion en directorios po
