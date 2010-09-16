@@ -1,3 +1,2 @@
 #!/bin/bash
-
-xgettext --language=Python --keyword=_ --output=po/tuquito-control-parental.pot usr/lib/tuquito/tuquito-control-parental/control.py
+xgettext --language=Python --keyword=_ --output=po/tuquito-control-parental.pot usr/lib/tuquito/tuquito-control-parental/control-parental.py
