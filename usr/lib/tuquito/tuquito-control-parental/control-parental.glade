@@ -221,8 +221,8 @@
     <property name="icon">control.png</property>
     <property name="type_hint">normal</property>
     <property name="preview_widget_active">False</property>
-    <property name="use_preview_label">False</property>
     <property name="create_folders">False</property>
+    <property name="use_preview_label">False</property>
     <signal name="close" handler="importClose"/>
     <signal name="delete_event" handler="importClose"/>
     <child internal-child="vbox">
@@ -282,6 +282,7 @@
   </object>
   <object class="GtkAboutDialog" id="about">
     <property name="border_width">5</property>
+    <property name="window_position">center</property>
     <property name="icon">control.png</property>
     <property name="type_hint">normal</property>
     <property name="has_separator">False</property>

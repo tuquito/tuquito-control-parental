@@ -1,3 +1,12 @@
+tuquito-control-parental (0.2-1) maverick; urgency=low
+
+  * arreglos en interfaz
+  * eliminación de librerias no usadas
+  * cambio de nombres
+  * nueva version para maverick
+
+ -- Mario Colque <mario@tuquito.org.ar>  Thu, 16 Sep 2010 01:46:14 -0300
+
 tuquito-control-parental (0.1-10.1) lucid; urgency=low
 
   * Revisión de traducciones
