@@ -1,7 +1,9 @@
 [Desktop Entry]
-Name=Control Parental
+Name=Parental Control
+Name[es]=Control Parental
 Name[pt]=Filtros de Conteúdo do Tuquito
-Comment=Control de acceso a sitios web
+Comment=Control access to websites
+Comment[es]=Control de acceso a sitios web
 Comment[pt]=Filtros de Conteúdo do Tuquito
 Exec=tuquito-control-parental
 Icon=/usr/lib/tuquito/tuquito-control-parental/control.png

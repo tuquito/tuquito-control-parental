@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tuquito-control-parental 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-06-28 17:28-0300\n"
+"POT-Creation-Date: 2010-09-15 22:43-0300\n"
 "PO-Revision-Date: 2010-06-14 14:25-0300\n"
 "Last-Translator: Mario Colque <mario@tuquito.org.ar>\n"
 "Language-Team: Spanish\n"
@@ -16,40 +16,43 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: usr/lib/tuquito/tuquito-control-parental/control.py:40
-#: usr/lib/tuquito/tuquito-control-parental/control.py:68
-msgid "Parental Control Tuquito"
-msgstr "Tuquito Control Parental"
+#: usr/lib/tuquito/tuquito-control-parental/control.py:39
+msgid "Parental Control"
+msgstr "Control Parental"
 
-#: usr/lib/tuquito/tuquito-control-parental/control.py:41
-#: usr/lib/tuquito/tuquito-control-parental/control.py:115
+#: usr/lib/tuquito/tuquito-control-parental/control.py:40
+#: usr/lib/tuquito/tuquito-control-parental/control.py:118
 msgid "Import list"
 msgstr "Importar lista"
 
-#: usr/lib/tuquito/tuquito-control-parental/control.py:42
+#: usr/lib/tuquito/tuquito-control-parental/control.py:41
 msgid "Export list"
 msgstr "Exportar lista"
 
-#: usr/lib/tuquito/tuquito-control-parental/control.py:45
+#: usr/lib/tuquito/tuquito-control-parental/control.py:44
 msgid "Blocked domains"
 msgstr "Dominios bloqueados"
 
-#: usr/lib/tuquito/tuquito-control-parental/control.py:76
+#: usr/lib/tuquito/tuquito-control-parental/control.py:67
+msgid "Parental Control Tuquito"
+msgstr "Tuquito Control Parental"
+
+#: usr/lib/tuquito/tuquito-control-parental/control.py:79
 msgid "Add domain"
 msgstr "Agregar dominio"
 
-#: usr/lib/tuquito/tuquito-control-parental/control.py:77
+#: usr/lib/tuquito/tuquito-control-parental/control.py:80
 msgid "Domain: "
 msgstr "Dominio: "
 
-#: usr/lib/tuquito/tuquito-control-parental/control.py:95
-msgid "blocked by Tuquito 4"
-msgstr "bloqueado por Tuquito 4"
+#: usr/lib/tuquito/tuquito-control-parental/control.py:98
+msgid "blocked by Tuquito"
+msgstr "bloqueado por Tuquito"
 
-#: usr/lib/tuquito/tuquito-control-parental/control.py:129
+#: usr/lib/tuquito/tuquito-control-parental/control.py:132
 msgid "File successfully imported"
 msgstr "Archivo importado correctamente"
 
-#: usr/lib/tuquito/tuquito-control-parental/control.py:141
+#: usr/lib/tuquito/tuquito-control-parental/control.py:144
 msgid "Successfully exported list.\n"
 msgstr "Lista exportada correctamente.\n"

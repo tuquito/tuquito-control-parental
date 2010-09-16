@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
- Tuquito Control Parental 0.1
+ Tuquito Control Parental 0.2
  Copyright (C) 2010
  Author: Mario Colque <mario@tuquito.org.ar>
  Tuquito Team! - www.tuquito.org.ar
@@ -19,8 +19,7 @@
  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 """
 
-import gtk, pygtk
-pygtk.require('2.0')
+import gtk
 import gettext, os, time
 
 # i18n
@@ -37,7 +36,7 @@ class ControlP:
 		self.glade = gtk.Builder()
 		self.glade.add_from_file('/usr/lib/tuquito/tuquito-control-parental/control.glade')
 		self.window = self.glade.get_object('window')
-		self.window.set_title(_('Parental Control Tuquito'))
+		self.window.set_title(_('Parental Control'))
 		self.glade.get_object('toolbutton_import').set_label(_('Import list'))
 		self.glade.get_object('toolbutton_export').set_label(_('Export list'))
 		self.treeview_domains = self.glade.get_object('treeview_domains')
@@ -69,7 +68,11 @@ class ControlP:
 		os.system(sh)
 
 	def about(self, widget, data=None):
-		os.system('/usr/lib/tuquito/tuquito-control-parental/control-about.py &')
+		self.glade.get_object('about').show()
+		
+	def closeAbout(self, widget, data=None):
+		self.glade.get_object('about').hide()
+		return True
 
 	def addDomain(self, widget):
 		self.glade.get_object('domain').set_text('')
@@ -92,7 +95,7 @@ class ControlP:
 					dom = dom + '  ' + '.'.join(parts[1:])
 				else:
 					dom = 'www.' + dom + '  ' + '.'.join(parts)
-		domain = '0.0.0.0    ' + dom + '    # ' + _('blocked by Tuquito 4')
+		domain = '0.0.0.0    ' + dom + '    # ' + _('blocked by Tuquito')
 		self.model = self.treeview_domains.get_model()
 		iter = self.model.insert_before(None, None)
 		self.model.set_value(iter, 0, dom)
@@ -113,8 +116,8 @@ class ControlP:
 
 	def importList(self, widget):
 		self.glade.get_object('filechooserdialog').set_title(_('Import list'))
-		self.glade.get_object('filechooserdialog').show()
 		self.glade.get_object('filechooserdialog').set_action(gtk.FILE_CHOOSER_ACTION_SAVE)
+		self.glade.get_object('filechooserdialog').show_all()
 
 	def importOk(self, widget, data=None):
 		importFile = self.glade.get_object('filechooserdialog').get_filename().strip()
