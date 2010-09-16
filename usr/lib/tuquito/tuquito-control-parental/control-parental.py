@@ -34,7 +34,7 @@ userHome = '/home/' + user + '/TCP'
 class ControlP:
 	def __init__(self):
 		self.glade = gtk.Builder()
-		self.glade.add_from_file('/usr/lib/tuquito/tuquito-control-parental/control.glade')
+		self.glade.add_from_file('/usr/lib/tuquito/tuquito-control-parental/control-parental.glade')
 		self.window = self.glade.get_object('window')
 		self.window.set_title(_('Parental Control'))
 		self.glade.get_object('toolbutton_import').set_label(_('Import list'))
