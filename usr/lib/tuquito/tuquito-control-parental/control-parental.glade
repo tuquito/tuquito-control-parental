@@ -25,7 +25,7 @@
               <object class="GtkToolButton" id="toolbutton_add">
                 <property name="visible">True</property>
                 <property name="stock_id">gtk-add</property>
-                <signal name="clicked" handler="addDomain"/>
+                <signal name="clicked" handler="add_domain"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -36,7 +36,7 @@
               <object class="GtkToolButton" id="toolbutton_remove">
                 <property name="visible">True</property>
                 <property name="stock_id">gtk-remove</property>
-                <signal name="clicked" handler="removeDomain"/>
+                <signal name="clicked" handler="remove_domain"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -47,7 +47,7 @@
               <object class="GtkToolButton" id="toolbutton_import">
                 <property name="visible">True</property>
                 <property name="stock_id">gtk-jump-to</property>
-                <signal name="clicked" handler="importList"/>
+                <signal name="clicked" handler="import_list"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -58,7 +58,7 @@
               <object class="GtkToolButton" id="toolbutton_export">
                 <property name="visible">True</property>
                 <property name="stock_id">gtk-redo</property>
-                <signal name="clicked" handler="exportList"/>
+                <signal name="clicked" handler="export_list"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -142,8 +142,8 @@
     <property name="icon">control.png</property>
     <property name="skip_pager_hint">True</property>
     <property name="urgency_hint">True</property>
-    <signal name="destroy" handler="closeDomain"/>
-    <signal name="delete_event" handler="closeDomain"/>
+    <signal name="destroy" handler="close_domain"/>
+    <signal name="delete_event" handler="close_domain"/>
     <child>
       <object class="GtkVBox" id="vbox1">
         <property name="visible">True</property>
@@ -180,7 +180,7 @@
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="use_stock">True</property>
-                <signal name="clicked" handler="closeDomain"/>
+                <signal name="clicked" handler="close_domain"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -195,7 +195,7 @@
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="use_stock">True</property>
-                <signal name="clicked" handler="saveDomain"/>
+                <signal name="clicked" handler="save_domain"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -216,22 +216,19 @@
   <object class="GtkFileChooserDialog" id="filechooserdialog">
     <property name="border_width">5</property>
     <property name="modal">True</property>
-    <property name="window_position">center</property>
+    <property name="window_position">center-always</property>
     <property name="destroy_with_parent">True</property>
     <property name="icon">control.png</property>
     <property name="type_hint">normal</property>
     <property name="preview_widget_active">False</property>
-    <property name="create_folders">False</property>
     <property name="use_preview_label">False</property>
-    <signal name="close" handler="importClose"/>
-    <signal name="delete_event" handler="importClose"/>
+    <property name="create_folders">False</property>
+    <signal name="close" handler="import_close"/>
+    <signal name="delete_event" handler="import_close"/>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox1">
         <property name="visible">True</property>
         <property name="spacing">2</property>
-        <child>
-          <placeholder/>
-        </child>
         <child internal-child="action_area">
           <object class="GtkHButtonBox" id="dialog-action_area1">
             <property name="visible">True</property>
@@ -243,7 +240,7 @@
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="use_stock">True</property>
-                <signal name="clicked" handler="importClose"/>
+                <signal name="clicked" handler="import_close"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -258,7 +255,7 @@
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="use_stock">True</property>
-                <signal name="clicked" handler="importOk"/>
+                <signal name="clicked" handler="on_import_ok"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -287,9 +284,8 @@
     <property name="type_hint">normal</property>
     <property name="has_separator">False</property>
     <property name="program_name">Control Parental</property>
-    <property name="version">0.2-1</property>
+    <property name="version">0.3-1</property>
     <property name="copyright" translatable="yes">Copyright &#xA9; 2010 - Tuquito Team!</property>
-    <property name="comments" translatable="yes">Un control de acceso a sitios web para Tuquito.</property>
     <property name="website">http://www.tuquito.org.ar</property>
     <property name="website_label" translatable="yes">Tuquito Team!</property>
     <property name="authors">Mario Colque &lt;mario@tuquito.org.ar&gt;</property>
@@ -297,9 +293,9 @@
 Carlos Pessoa de Ara&#xFA;jo &lt;carlosfelipe@tuquito.org.ar&gt;</property>
     <property name="artists">Mario Colque &lt;mario@tuquito.org.ar&gt;</property>
     <property name="logo">control.png</property>
-    <signal name="close" handler="closeAbout"/>
-    <signal name="response" handler="closeAbout"/>
-    <signal name="delete_event" handler="closeAbout"/>
+    <signal name="close" handler="close_about"/>
+    <signal name="response" handler="close_about"/>
+    <signal name="delete_event" handler="close_about"/>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox3">
         <property name="visible">True</property>
@@ -320,5 +316,73 @@ Carlos Pessoa de Ara&#xFA;jo &lt;carlosfelipe@tuquito.org.ar&gt;</property>
         </child>
       </object>
     </child>
+  </object>
+  <object class="GtkFileChooserDialog" id="filechooserdialog1">
+    <property name="border_width">5</property>
+    <property name="modal">True</property>
+    <property name="window_position">center-always</property>
+    <property name="destroy_with_parent">True</property>
+    <property name="icon">control.png</property>
+    <property name="type_hint">normal</property>
+    <property name="preview_widget_active">False</property>
+    <property name="action">save</property>
+    <property name="do_overwrite_confirmation">True</property>
+    <property name="use_preview_label">False</property>
+    <signal name="close" handler="export_close"/>
+    <signal name="delete_event" handler="export_close"/>
+    <child internal-child="vbox">
+      <object class="GtkVBox" id="dialog-vbox4">
+        <property name="visible">True</property>
+        <property name="spacing">2</property>
+        <child>
+          <placeholder/>
+        </child>
+        <child internal-child="action_area">
+          <object class="GtkHButtonBox" id="dialog-action_area4">
+            <property name="visible">True</property>
+            <property name="layout_style">end</property>
+            <child>
+              <object class="GtkButton" id="fcance2">
+                <property name="label">gtk-cancel</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_stock">True</property>
+                <signal name="clicked" handler="export_close"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="fok2">
+                <property name="label">gtk-ok</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_stock">True</property>
+                <signal name="clicked" handler="on_export_ok"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="pack_type">end</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <action-widgets>
+      <action-widget response="0">fcance2</action-widget>
+      <action-widget response="0">fok2</action-widget>
+    </action-widgets>
   </object>
 </interface>

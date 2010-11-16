@@ -9,4 +9,3 @@ Package: tuquito-control-parental
 Architecture: all
 Description: Control parental de Tuquito
  Aplicación que permite el control de acceso a sitios web utilizandon bloqueos en el archivo /etc/hosts
- * Tuquito Team! - 2010

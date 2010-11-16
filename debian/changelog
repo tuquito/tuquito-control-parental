@@ -1,3 +1,12 @@
+tuquito-control-parental (0.3-1) maverick; urgency=low
+
+  * elección de nombre en "exportar archivo"
+  * mejoras en el interfaz
+  * eliminación de las notificaciones
+  * mejor guardado de archivo
+
+ -- Mario Colque <mario@tuquito.org.ar>  Mon, 15 Nov 2010 23:46:00 -0300
+
 tuquito-control-parental (0.2-1) maverick; urgency=low
 
   * arreglos en interfaz
