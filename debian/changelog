@@ -1,3 +1,9 @@
+tuquito-control-parental (0.3-2) maverick; urgency=low
+
+  * fixed permissions
+
+ -- Mario Colque <mario@tuquito.org.ar>  Thu, 30 Dec 2010 20:12:13 -0300
+
 tuquito-control-parental (0.3-1) maverick; urgency=low
 
   * elección de nombre en "exportar archivo"
