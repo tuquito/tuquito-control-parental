@@ -9,7 +9,7 @@
     <property name="icon">control.png</property>
     <property name="type_hint">normal</property>
     <property name="program_name">Control Parental</property>
-    <property name="version">0.3-3</property>
+    <property name="version">0.3-5</property>
     <property name="copyright" translatable="yes">Copyright © 2010 - Tuquito Team!</property>
     <property name="website">http://www.tuquito.org.ar</property>
     <property name="website_label" translatable="yes">Tuquito Team!</property>
