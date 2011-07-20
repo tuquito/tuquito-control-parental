@@ -3,7 +3,7 @@
 
 """
  Tuquito Control Parental 0.3
- Copyright (C) 2010
+ Copyright (C) 2011
  Author: Mario Colque <mario@tuquito.org.ar>
  Tuquito Team! - www.tuquito.org.ar
 
@@ -19,8 +19,7 @@
  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 """
 
-import gtk
-import gettext, os, time
+import gtk, gettext, os, time
 
 # i18n
 gettext.install('tuquito-control-parental', '/usr/share/tuquito/locale')
@@ -90,7 +89,7 @@ class ControlP:
                 if parts[0] == 'www':
                     dom = dom + ' ' + '.'.join(parts[1:])
                 else:
-                    dom = 'www.' + dom + ' ' + '.'.join(parts)
+                    dom = 'www.' + dom + ' ' + dom
         domain = '0.0.0.0\t' + dom + '\t#' + _('blocked by Tuquito')
         self.model = self.treeview_domains.get_model()
         iter = self.model.insert_before(None, None)
