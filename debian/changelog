@@ -1,3 +1,9 @@
+tuquito-control-parental (0.3-6) precise; urgency=low
+
+  * Guarani branch
+
+ -- Mario Colque <mario@tuquito.org.ar>  Tue, 22 May 2012 14:32:10 -0300
+
 tuquito-control-parental (0.3-5) natty; urgency=low
 
   * permissions fixed

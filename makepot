@@ -1,2 +1,5 @@
 #!/bin/bash
-xgettext --language=Python --keyword=_ --output=po/tuquito-control-parental.pot usr/lib/tuquito/tuquito-control-parental/control-parental.py
+xgettext --language=Python --keyword=_ --output=po/tuquito-control-parental.pot usr/lib/tuquito/tuquito-control-parental/control-parental.py --from-code=utf-8
+cd po
+msgmerge es.po tuquito-control-parental.pot -o es.po
+msgmerge pt_BR.po tuquito-control-parental.pot -o pt_BR.po
